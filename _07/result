@@ -1,0 +1,12 @@
+=== [using gradient descent] ===================
+=== [part one] =================================
+Options { max_tries: Some(100000), max_reps: Some(10), alpha: Some(0.001), decay: Some(0.001) }
+[epochs = 2728] x_best = 382, fuel = 352258
+
+=== [part two] =================================
+Options { max_tries: Some(100000), max_reps: Some(10), alpha: Some(0.0001), decay: Some(0.001) }
+[epochs = 573] x_best = 505, fuel = 99053183
+
+=== [using your brain] =================================
+[part_one] median = 383, fuel = 352254
+[part_two] mean   = 504, fuel = 99053143

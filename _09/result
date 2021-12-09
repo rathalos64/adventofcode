@@ -1,0 +1,11 @@
+=== [ part one ] ==================================
+|| get the low points ||
+
+n_low points: 	247
+risk level: 	600
+
+=== [ part two ] ==================================
+|| region grow the basins ||
+
+n_basins: 		247
+size top3 basins: 	987840

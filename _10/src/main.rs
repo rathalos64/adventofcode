@@ -111,7 +111,7 @@ fn parse(tokens: &Vec<char>, pos: i32) -> Result<i32, ParseError> {
     }
 }
 
-pub fn middle(mut list: Vec<u64>) -> u64 {
+fn middle(mut list: Vec<u64>) -> u64 {
     assert_ne!(list.len(), 0);
 
     list.sort(); // inefficient to copy whole array but let's stick with it

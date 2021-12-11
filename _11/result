@@ -1,0 +1,7 @@
+=== [ part one ] ============================
+|| how many octo flashes after 100 steps? ||
+After step 100: 1661 flashes
+
+=== [ part two ] ============================
+|| how long until complete synchronization? ||
+1st total synchronization reached after 334 steps: 5201 flashes

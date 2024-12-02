@@ -1,0 +1,67 @@
+79 14
+#1 79 .. 92
+
+==============================
+52 50 48
+src 50 .. 98
+dst 52 .. 100
+
+#1 in src 50 .. 98 | check
+indices = [(79 - 50), (92 - 98)]
+        = [29, -6] // 29 from start, -6 from end
+
+dst = [(52 + 29), (100 - 6)]
+    = [81, 94]
+
+left_overs = [] // the whole seed range is covered by one entry
+
+==============================
+0 15 37
+src 15 .. 52
+dst  0 .. 37
+
+> #1 in src 15 .. 52 | false
+left_overs = [(79, 92)]
+
+37 52 2
+src 52 .. 54
+dst 37 .. 39
+
+> #1 in src 52 .. 54 | false
+left_overs = [(79, 92)]
+
+39 0 15
+src  0 .. 15
+dst 39 .. 54
+
+> #1 in src 0 .. 15 | false
+left_overs = [(79, 92)]
+
+==> dst = [(79, 92)]
+
+==============================
+18 25 70
+src 25 .. 95
+dst 18 .. 88
+
+> #1 in src | check
+indices = [(79 - 25), (92 - 95)]
+        = [54, -3] // 54 from start, -3 from end
+
+dst = [(18 + 54), (88 - 3)]
+    = [72, 85]
+
+left_overs = [] // the whole seed range is covered by one entry
+
+==============================
+
+68 64 23
+src 64 .. 87
+dst 68 .. 91
+
+> #1 in src | check, but partially
+indices = [(79 - 64), (92 - 87)]
+        = [15, 5] // 15 from start, 5 over end
+
+dst = [(68 + max(15, 0)), (91 + min(5, 0))]
+left_overs = [(92 - 5, 92)] // part of dst

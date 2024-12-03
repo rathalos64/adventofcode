@@ -9,6 +9,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	_01 "github.com/rathalos64/adventofcode/2024/_01"
 	_02 "github.com/rathalos64/adventofcode/2024/_02"
+	"github.com/rathalos64/adventofcode/2024/_03"
 	"github.com/rathalos64/adventofcode/2024/core"
 )
 
@@ -42,8 +43,13 @@ func (controller *Controller) RegisterExercises() error {
 	if err != nil {
 		return fmt.Errorf("failed to register exercise 02: %w", err)
 	}
+	e3, _, err := _03.GetExercise()
+	if err != nil {
+		return fmt.Errorf("failed to register exercise 02: %w", err)
+	}
 	controller.Exercises["01"] = e1
 	controller.Exercises["02"] = e2
+	controller.Exercises["03"] = e3
 	return nil
 }
 
@@ -79,8 +85,11 @@ func (controller *Controller) ExerciseR(w http.ResponseWriter, r *http.Request) 
 	w.Write([]byte("\n\n"))
 
 	w.Write([]byte("==========================================================="))
+	w.Write([]byte("\n\n"))
 	w.Write([]byte(exercise.GetDescription()))
 	w.Write([]byte("\n\n"))
 
+	w.Write([]byte("==========================================================="))
+	w.Write([]byte("\n\n"))
 	w.Write([]byte(exercise.GetInput()))
 }

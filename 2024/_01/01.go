@@ -99,5 +99,5 @@ func (e *exercise) GetInput() string {
 }
 
 func (e *exercise) GetDescription() string {
-	return Description
+	return description
 }

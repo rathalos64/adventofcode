@@ -1,6 +1,6 @@
 package _02
 
-var Description = `--- Day 2: Red-Nosed Reports ---
+var description = `--- Day 2: Red-Nosed Reports ---
 
 Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
 

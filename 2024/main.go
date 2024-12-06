@@ -7,9 +7,10 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	_01 "github.com/rathalos64/adventofcode/2024/_01"
-	_02 "github.com/rathalos64/adventofcode/2024/_02"
+	"github.com/rathalos64/adventofcode/2024/_01"
+	"github.com/rathalos64/adventofcode/2024/_02"
 	"github.com/rathalos64/adventofcode/2024/_03"
+	"github.com/rathalos64/adventofcode/2024/_04"
 	"github.com/rathalos64/adventofcode/2024/core"
 )
 
@@ -45,11 +46,16 @@ func (controller *Controller) RegisterExercises() error {
 	}
 	e3, _, err := _03.GetExercise()
 	if err != nil {
-		return fmt.Errorf("failed to register exercise 02: %w", err)
+		return fmt.Errorf("failed to register exercise 03: %w", err)
+	}
+	e4, _, err := _04.GetExercise()
+	if err != nil {
+		return fmt.Errorf("failed to register exercise 04: %w", err)
 	}
 	controller.Exercises["01"] = e1
 	controller.Exercises["02"] = e2
 	controller.Exercises["03"] = e3
+	controller.Exercises["04"] = e4
 	return nil
 }
 
